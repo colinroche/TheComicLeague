@@ -14,3 +14,7 @@ We've decided not to have a purchase option for comics as we want to focus on th
 18/02/2019
 After reviewing some Firebase tutorials (see wiki) we have settled and are ready to commence developing  the apps body . Firebase will allow us to work concurrently on the cloud ,we just have to connect between the app and firebase project. We are thinking of using Angular authentication for our log in so we will be watching some example tutorials (see wiki) for reference.
 We intend to have a base design for the logo of the app complete this week. The logo will be designed using GIMP. 
+
+
+25/02/19
+After going through the Angular Authentifaction videos, we proceeded to get the Login and Register API connected to a database.  The database we decided to use for this part of the project was mongoDB.  We also finished up the look of the logo's design for the app trying to have a look that would suit multiple comicbook producers.  We decided onf finishing the login/register and having the home page set up for next week. 
