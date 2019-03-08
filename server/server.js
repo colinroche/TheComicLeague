@@ -5,11 +5,17 @@ const bodyParser = require('body-parser')
 // constant for port number
 const PORT = 8081
 
+// require api route
+const api = require('./routes/api')
+
 // instance of express
 const app = express()
 
 // specify body-parser to handle JSON data
 app.use(bodyParser.json())
+
+// specify api route
+app.use('/api', api)
 
 // get request
 app.get('/', function (req, res) {
