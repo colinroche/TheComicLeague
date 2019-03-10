@@ -2,11 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\server",
-    "\\src\\app",
-    "\\src\\app\\services",
-    "\\src\\assets",
-    "\\src\\environments"
+    "\\server\\models"
   ],
-  "SelectedNode": "\\server\\routes",
+  "SelectedNode": "\\server",
   "PreviewInSolutionExplorer": false
 }
