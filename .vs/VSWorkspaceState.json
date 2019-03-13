@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\server",
-    "\\server\\models"
+    "\\comicApp",
+    "\\comicApp\\src",
+    "\\comicApp\\src\\app",
+    "\\comicApp\\src\\app\\services"
   ],
-  "SelectedNode": "\\server",
+  "SelectedNode": "\\comicApp\\src\\app\\services\\home.service.spec.ts",
   "PreviewInSolutionExplorer": false
 }
