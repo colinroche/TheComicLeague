@@ -4,8 +4,11 @@
     "\\comicApp",
     "\\comicApp\\src",
     "\\comicApp\\src\\app",
+    "\\comicApp\\src\\app\\pages",
+    "\\comicApp\\src\\app\\pages\\login",
+    "\\comicApp\\src\\app\\pages\\signup",
     "\\comicApp\\src\\app\\services"
   ],
-  "SelectedNode": "\\comicApp\\src\\app\\services\\home.service.spec.ts",
+  "SelectedNode": "\\server",
   "PreviewInSolutionExplorer": false
 }
