@@ -1,15 +1,17 @@
 // requiring installed packages
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 // constant for port number
 const PORT = 8081
-
 // require api route
 const api = require('./routes/api')
-
 // instance of express
 const app = express()
+
+// middleware to join front and back end
+app.use(cors())
 
 // specify body-parser to handle JSON data
 app.use(bodyParser.json())

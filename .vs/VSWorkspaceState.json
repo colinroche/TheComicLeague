@@ -1,13 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\comicApp",
-    "\\comicApp\\src",
-    "\\comicApp\\src\\app",
-    "\\comicApp\\src\\app\\pages",
-    "\\comicApp\\src\\app\\pages\\login",
-    "\\comicApp\\src\\app\\pages\\signup",
-    "\\comicApp\\src\\app\\services"
+    ""
   ],
   "SelectedNode": "\\server",
   "PreviewInSolutionExplorer": false
