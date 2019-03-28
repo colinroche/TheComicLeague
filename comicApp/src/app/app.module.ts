@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
 import { PersonalService } from './services/personal.service';
+import { AuthGuard } from './guard/auth.guard';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PersonalService } from './services/personal.service';
     SplashScreen,
     AuthService,
     PersonalService,
+    AuthGuard,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
