@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   // set variable to store back-end API URL
-    private _signupUrl = "http://localhost:8081/api/signup"
-    private _loginUrl = "http://localhost:8081/api/login"
+  private _signupUrl = "http://localhost:8081/api/signup"
+  private _loginUrl = "http://localhost:8081/api/login"
 
   // inject HttpClient
   constructor(private http: HttpClient) { }

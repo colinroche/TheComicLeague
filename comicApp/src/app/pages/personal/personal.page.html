@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Personal Comics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    
+</ion-content>
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let personal of personalComic">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">{{personal.name}}</h5>
+                <p class="card-text">{{personal.description}}</p>
+                <a href="#" class="btn btn-success">Buy Tickets</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{personal.date | date: 'shortDate'}}
+            </div>
+        </div>
+    </div>
+</div>

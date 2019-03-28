@@ -1,5 +1,6 @@
 // requiring installed packages
 const express = require('express')
+const jwt = require('jsonwebtoken')
 // setting instance 
 const router = express.Router()
 
@@ -36,8 +37,12 @@ router.post('/signup', (req, res) => {
         if (error) {
             console.log(error)
         } else {
-            // send status 200 and details of the signup user
-            res.status(200).send(signupUser)
+            // make playload object to contain signup id
+            let payload = { subject: signupUser._id }
+            // assign a json web token to the user
+            let token = jwt.sign(payload, 'tokenKey')
+            // send status 200 and signup user token object
+            res.status(200).send({ token })
         }
     })
 })
@@ -60,12 +65,29 @@ router.post('/login', (req, res) => {
             else if (user.password !== userData.password) {
                 res.status(401).send('Invalid Password')
             }
-            // if username and password match send login user details
+            // if username and password match
             else {
-                res.status(200).send(user)
+                // make playload object to contain login id
+                let payload = { subject: user._id }
+                // assign a json web token to the user
+                let token = jwt.sign(payload, 'tokenKey')
+                // send status 200 and the user token object
+                res.status(200).send({ token })
             }
         }
     })
+})
+
+router.get('/personal', (req, res) => {
+    let personal = [
+        {
+            "id": "1",
+            "name": "Auto Expo",
+            "description": "lorem ipsum",
+            "date": "2012-04-23T18:25:43.511Z"
+        }
+    ]
+    res.json(personal)
 })
 
 // export router
