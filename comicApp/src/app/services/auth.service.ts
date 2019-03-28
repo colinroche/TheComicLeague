@@ -27,4 +27,9 @@ export class AuthService {
   loggedIn() {
     return !!localStorage.getItem('token')
   }
+
+  // method to fetch token value
+  getToken() {
+    return localStorage.getItem('token')
+  }
 }

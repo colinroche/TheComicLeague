@@ -82,8 +82,8 @@ router.get('/personal', (req, res) => {
     let personal = [
         {
             "id": "1",
-            "name": "Auto Expo",
-            "description": "lorem ipsum",
+            "name": "Comic 1",
+            "description": "Marvel",
             "date": "2012-04-23T18:25:43.511Z"
         }
     ]
