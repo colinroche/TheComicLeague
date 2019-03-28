@@ -21,6 +21,29 @@ mongoose.connect(db, err => {
     }
 })
 
+// method to verify token
+function verifyToken(req, res, next) {
+    // check if 'Authorization:' key is not present as part of header
+    if (!req.headers.authorization) {
+        return res.status(401).send('Unauthorized request')
+    }
+    // if key present extract the token value
+    let token = req.headers.authorization.split(' ')[1]
+    // if no token present
+    if (token === 'null') {
+        return res.status(401).send('Unauthorized request')
+    }
+    // if token present, verify using JWT
+    let payload = jwt.verify(token, 'tokenKey')
+    // if no payload
+    if (!payload) {
+        return res.status(401).send('Unauthorized request')
+    }
+    // if everything present
+    req.userId = payload.subject
+    next()
+}
+
 // get request
 router.get('/', (req, res) => {
     res.send('From API route')
@@ -78,7 +101,9 @@ router.post('/login', (req, res) => {
     })
 })
 
-router.get('/personal', (req, res) => {
+// pass in verifyToken as the second argument
+// only runs if verifyToken is successful
+router.get('/personal', verifyToken, (req, res) => {
     let personal = [
         {
             "id": "1",
