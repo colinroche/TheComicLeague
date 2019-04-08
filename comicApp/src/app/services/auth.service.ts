@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class AuthService {
   private _loginUrl = "http://localhost:8081/api/login"
 
   // inject HttpClient
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _router: Router) { }
 
   // accepts a user object and returns the backend signup API response
   signupUser(user) {
@@ -26,7 +27,13 @@ export class AuthService {
   // method returns true if token is present in local storage
   loggedIn() {
     return !!localStorage.getItem('token')
-  }
+    }
+
+  // method to logout user
+    logoutUser() {
+        localStorage.removeItem('token')
+        this._router.navigate(['/home-page'])
+    }
 
   // method to fetch token value
   getToken() {

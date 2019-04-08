@@ -5,12 +5,11 @@
     "\\comicApp\\src",
     "\\comicApp\\src\\app",
     "\\comicApp\\src\\app\\pages",
-    "\\comicApp\\src\\app\\pages\\signup",
     "\\comicApp\\src\\app\\services",
     "\\server",
     "\\server\\models",
     "\\server\\routes"
   ],
-  "SelectedNode": "\\comicApp\\src\\app\\pages\\signup\\signup.page.ts",
+  "SelectedNode": "\\comicApp\\src\\app\\services\\auth.service.ts",
   "PreviewInSolutionExplorer": false
 }
