@@ -3,13 +3,10 @@
     "",
     "\\comicApp",
     "\\comicApp\\src",
-    "\\comicApp\\src\\app",
-    "\\comicApp\\src\\app\\pages",
-    "\\comicApp\\src\\app\\services",
     "\\server",
     "\\server\\models",
     "\\server\\routes"
   ],
-  "SelectedNode": "\\comicApp\\src\\app\\services\\auth.service.ts",
+  "SelectedNode": "\\server\\routes\\api.js",
   "PreviewInSolutionExplorer": false
 }

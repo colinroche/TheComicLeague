@@ -4,7 +4,7 @@
 
 export const environment = {
 	production: false,
-	firebase: {
+	firebaseConfig: {
 		apiKey: "AIzaSyBfphi4-_5yI1p8QeDAMCLMBICX3BA3Fko",
 		authDomain: "thecomicleague1.firebaseapp.com",
 		databaseURL: "https://thecomicleague1.firebaseio.com",

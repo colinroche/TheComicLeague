@@ -1,10 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>HomePage</ion-title>
+    <ion-title>Welcome to Our App!!!</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <!-- The world is your oyster.
+    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p> -->
 </ion-content>
+
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let comic of comics">
+      <div class="card text-center">
+          <div class="card-body">
+              <h5 class="card-title">{{comic.title}}</h5>
+              <p class="card-image"><img src={{comic.image}}/></p>
+          </div>
+      </div>
+  </div>
+</div>
