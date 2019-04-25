@@ -25,6 +25,7 @@ import { FirestoreSettingsToken } from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
 
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,6 +38,7 @@ import { AppComponent } from './app.component';
     HttpClientModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),	
     AngularFirestoreModule,
+    NgScrollbarModule,
   ],
   providers: [
     StatusBar,

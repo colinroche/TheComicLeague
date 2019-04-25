@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../services/firebase.service';
 import { Fire } from '../../models/firebase';
+import { NgScrollbarModule } from 'ngx-scrollbar';
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.page.html',
