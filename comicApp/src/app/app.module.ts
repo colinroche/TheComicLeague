@@ -20,8 +20,11 @@ import { FirebaseService } from './services/firebase.service';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+// Prevent timestampsInSnapshots error
+import { FirestoreSettingsToken } from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -44,7 +47,8 @@ import { AppComponent } from './app.component';
     FirebaseService,
     // allow multiple tokens if needed
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true },
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: FirestoreSettingsToken, useValue: {} }
   ],
   bootstrap: [AppComponent]
 })
